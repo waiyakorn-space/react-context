@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ThemeContext from "./ThemeContext";
 
-const ComponentE = () => (
-  <ThemeContext.Consumer>
-    {(value) => <p style={{ color: value }}>Hello React Context</p>}
-  </ThemeContext.Consumer>
-);
+const ComponentE = () => {
+  const color = useContext(ThemeContext);
+return (<p style={{color}}>Helloooo</p>)
+ 
+};
 
 export default ComponentE;
